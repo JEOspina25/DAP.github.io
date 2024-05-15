@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>DAP: Data Analysis Project</title>
 </head>
 <body>
-    <h1>Hola, mundo!</h1>
-    <p>Este es mi primer sitio web.</p>
-    <script src="script.js"></script>
+    <h1>DAP: Data Analysis Project</h1>
+    <div>
+        <button onclick="toggleCMS()">CMS</button>
+        <div id="cmsContent" style="display: none;">
+            Contenido del botón CMS
+        </div>
+    </div>
+    <div>
+        <button onclick="toggleMonteCarlo()">Monte Carlo Simulation</button>
+        <div id="monteCarloContent" style="display: none;">
+            Contenido del botón Monte Carlo Simulation
+        </div>
+    </div>
+    <div>
+        <button onclick="toggleDataMining()">Data Mining</button>
+        <div id="dataMiningContent" style="display: none;">
+            Contenido del botón Data Mining
+        </div>
+    </div>
+
+    <script>
+        function toggleCMS() {
+            var cmsContent = document.getElementById("cmsContent");
+            if (cmsContent.style.display === "none") {
+                cmsContent.style.display = "block";
+            } else {
+                cmsContent.style.display = "none";
+            }
+        }
+
+        function toggleMonteCarlo() {
+            var monteCarloContent = document.getElementById("monteCarloContent");
+            if (monteCarloContent.style.display === "none") {
+                monteCarloContent.style.display = "block";
+            } else {
+                monteCarloContent.style.display = "none";
+            }
+        }
+
+        function toggleDataMining() {
+            var dataMiningContent = document.getElementById("dataMiningContent");
+            if (dataMiningContent.style.display === "none") {
+                dataMiningContent.style.display = "block";
+            } else {
+                dataMiningContent.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
