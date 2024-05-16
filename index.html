@@ -5,26 +5,73 @@
     <link rel="stylesheet" href="index.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAP </title> <!--Titulo en la pestaña-->
+    <title>DAP</title>
+    <style>
+        body {
+            background-image: url('background.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .justificado {
+        text-align: center;
+        }
+        button {
+            font-size: 18px;
+            background-position: 0 0;
+            transition: background-position 0.3s;
+            padding: 15px 24px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            
+            box-shadow: 4px 4px 10px rgba(7, 69, 163, 0.622);
+        }
+
+        hr {
+            border: none;
+            border-top: 10px solid #333;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>DAP: Data Analysis Project </h1>
-    <div>
-        <button onclick="toggleCMS()">CMS</button>
-        <div id="cmsContent" style="display: none;">
-            Contenido del botón CMS
-        </div>
-    </div>
-    <div>
-        <button onclick="toggleMonteCarlo()">Monte Carlo Simulation</button>
-        <div id="monteCarloContent" style="display: none;">
-            Contenido del botón Monte Carlo Simulation
-        </div>
-    </div>
-    <div>
-        <button onclick="toggleDataMining()">Data Mining</button>
-        <div id="dataMiningContent" style="display: none;">
-            Contenido del botón Data Mining
+    <div class="overlay"></div> <!-- Capa blanca -->
+    <div class="content">
+        <h1>DAP: Data Analysis Project</h1>
+    
+        <p class="justificado">The DAP project is a tool for students who are just starting on the path of high-energy physics.<br> It is a project initiated by a group of students of the University of Antioquia in a free and autonomous way.
+        </p>
+        <hr>
+        <h2>Topics</h2>
+        <div style="display: flex; justify-content: space-around;">
+            <div>
+                <button onclick="toggleCMS()">CMS documentation</button>
+                <div id="cmsContent" style="display: none;">
+                    <h2> The CMS experiment</h2>
+                    <p class="justificado">The Compact Muon Solenoid (CMS) is a general-purpose detector at the Large Hadron Collider (LHC). It has a broad physics program ranging from studying the Standard Model (including the Higgs boson) to searching for extra dimensions and particles that could make up dark matter. Although it has the same scientific goals as the ATLAS experiment, it uses different technical solutions and a different magnet-system design.</p>
+                    <p class="justificado">The CMS detector is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel 'yoke' that forms the bulk of the detector's 14,000-tonne weight.</p>
+                    <p class="justificado">The CMS detector is shaped like a cylindrical onion, with several concentric layers of components. The layers closest to the beam are designed to identify different types of particles, while the outer layers are designed to measure the energy of the particles produced in the collisions.</p>
+                    <img src="CMS_diagram_01.jpg" alt="Diagram of CMS detector for LHC">
+                    
+                </div>
+            </div>
+            <div>
+                <button onclick="toggleMonteCarlo()">Monte Carlo Simulation</button>
+                <div id="monteCarloContent" style="display: none;">
+                    Contenido del botón Monte Carlo Simulation
+                </div>
+            </div>
+            <div>
+                <button onclick="toggleDataMining()">Laboratories</button>
+                <div id="dataMiningContent" style="display: none;">
+                    Contenido del botón Data Mining
+                </div>
+            </div>
         </div>
     </div>
 
@@ -58,4 +105,3 @@
     </script>
 </body>
 </html>
-

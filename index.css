@@ -6,18 +6,21 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #000000;
     text-align: center;
     margin-top: 50px;
 }
 
 p {
-    color: #666;
+    color: #000000;
     text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+
 }
 
 button {
-    background-color: #04AA6D; /* Green */
+    background-color: #13347f; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -26,3 +29,31 @@ button {
     display: inline-block;
     font-size: 16px;
 }
+
+<style>
+    body {
+        background-image: url('background.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5); /* Color blanco semi-transparente */
+    }
+
+    /* Estilos para el contenido */
+    .content {
+        position: relative; /* Asegura que el contenido esté por encima de la capa blanca */
+        z-index: 1; /* Asegura que el contenido esté por encima de la capa blanca */
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
